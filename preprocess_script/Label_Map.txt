@@ -1,0 +1,9 @@
+# # Label Mapping
+# LEFT_HAND = 61 -> 1
+# RIGHT_HAND = 71 -> 2
+# LEFT_OBJ1 = 1 -> 3
+# LEFT_OBJ2 = 11 -> 6
+# RIGHT_OBJ1 = 21 -> 4
+# RIGHT_OBJ2 = 31 -> 7
+# TWO_OBJ1 = 41 -> 5
+# TWO_OBJ2 = 51 -> 8

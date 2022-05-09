@@ -3,3 +3,9 @@
 
 *.pt
 *.pth
+
+*.zip
+*.tar
+
+/mmsegmentation
+/data
