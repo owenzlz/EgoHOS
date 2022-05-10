@@ -121,7 +121,7 @@ if __name__ == '__main__':
     src_flist_list, dst_fname_list = append_flist_dst_fname(p5_dir, 'ego4d', src_flist_list, dst_fname_list)
     src_flist_list, dst_fname_list = append_flist_dst_fname(p6_dir, 'ego4d', src_flist_list, dst_fname_list)
     src_flist_list, dst_fname_list = append_flist_dst_fname(p7_dir, 'ego4d', src_flist_list, dst_fname_list)
-
+    
     leng = len(src_flist_list)
     train_leng = int(leng * 0.8)
     val_leng = int(leng * 0.1)

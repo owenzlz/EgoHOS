@@ -52,6 +52,7 @@ if __name__ == '__main__':
 
         lbl_handobj1_dir = '../data/'+lbl_type+'/label_handobj1'
         cvt_lbl(lbl_dir, lbl_handobj1_dir, 'handobj1')
+        
 
 
     
