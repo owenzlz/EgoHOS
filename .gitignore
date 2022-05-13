@@ -7,5 +7,5 @@
 *.zip
 *.tar
 
-/mmsegmentation
+# /mmsegmentation
 /data
