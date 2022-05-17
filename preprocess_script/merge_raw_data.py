@@ -130,7 +130,7 @@ if __name__ == '__main__':
     valtest_idx_list = list(set(idx_list) - set(train_idx_list))
     val_idx_list = random.sample(valtest_idx_list, val_leng)
     test_idx_list = list(set(valtest_idx_list) - set(val_idx_list))
-
+    
     print('train: ', len(train_idx_list))
     print('val: ', len(val_idx_list))
     print('test: ', len(test_idx_list))

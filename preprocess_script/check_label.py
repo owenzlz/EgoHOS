@@ -22,8 +22,6 @@ for lbl_type in lbl_type_list:
         img_file = os.path.join(image_dir, fname + '.jpg')
         img = np.array(Image.open(img_file))
         unique_vals = np.unique(lbl)
-        
-        # print(unique_vals)
 
         if min(unique_vals) < 0 or max(unique_vals) > 8:
             print('label out of bound!')
@@ -37,5 +35,7 @@ for lbl_type in lbl_type_list:
 
             os.remove(img_file)
             os.remove(lbl_file)
-        # pdb.set_trace()
+
+
+
 

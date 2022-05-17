@@ -38,19 +38,19 @@ data = dict(
         type=dataset_type,
         data_root=data_root,
         img_dir='train/image',
-        ann_dir='train/label',
+        ann_dir='train/label_handobj1',
         pipeline=train_pipeline),
     val=dict(
         type=dataset_type,
         data_root=data_root,
         img_dir='val/image',
-        ann_dir='val/label',
+        ann_dir='val/label_handobj1',
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
         data_root=data_root,
         img_dir='test_indomain/image',
-        ann_dir='test_indomain/label',
+        ann_dir='test_indomain/label_handobj1',
         pipeline=test_pipeline))
 
 
