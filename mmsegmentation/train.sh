@@ -19,15 +19,15 @@
 
 
 # ./tools/dist_train.sh ./configs/hrnet/fcn_hr18_480x360_80k_egohos_handobj2.py 8
-
 # ./tools/dist_train.sh ./configs/hrnet/fcn_hr48_480x360_80k_egohos_handobj2.py 8
 
 
 
-./tools/dist_train.sh ./configs/pspnet/pspnet_r50-d8_480x360_80k_egohos_handobj1.py 8
+# ./tools/dist_train.sh ./configs/pspnet/pspnet_r50-d8_480x360_80k_egohos_handobj1.py 8
 ./tools/dist_train.sh ./configs/swin/upernet_swin_base_patch4_window12_512x512_160k_egohos_handobj1_pretrain_480x360_22K.py 8
-./tools/dist_train.sh ./configs/hrnet/fcn_hr18_480x360_80k_egohos_handobj1.py 8
-./tools/dist_train.sh ./configs/hrnet/fcn_hr48_480x360_80k_egohos_handobj1.py 8
+# ./tools/dist_train.sh ./configs/hrnet/fcn_hr18_480x360_80k_egohos_handobj1.py 8
+# ./tools/dist_train.sh ./configs/hrnet/fcn_hr48_480x360_80k_egohos_handobj1.py 8
+
 
 
 
