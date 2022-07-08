@@ -3,11 +3,11 @@ dataset_type = 'EgoHOSDataset'
 data_root = '/mnt/session_space/home/lingzzha/EgoHOS/data'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
-crop_size = (480, 360)
+crop_size = (360, 480)
 train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='LoadAnnotations', reduce_zero_label=False),
-    dict(type='Resize', img_scale=(480, 360), ratio_range=(0.5, 2.0)),
+    dict(type='Resize', img_scale=(360, 480), ratio_range=(0.5, 2.0)),
     dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
     dict(type='RandomFlip', prob=0.5),
     dict(type='PhotoMetricDistortion'),
@@ -20,7 +20,7 @@ test_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(
         type='MultiScaleFlipAug',
-        img_scale=(480, 360),
+        img_scale=(360, 480),
         # img_ratios=[0.5, 0.75, 1.0, 1.25, 1.5, 1.75],
         flip=False,
         transforms=[
@@ -43,8 +43,8 @@ data = dict(
     val=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='val/image',
-        ann_dir='val/label_handobj1',
+        img_dir='test_outdomain/image',
+        ann_dir='test_outdomain/label_handobj1',
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,

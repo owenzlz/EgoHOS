@@ -24,7 +24,7 @@ def visualize_segmentation(img, seg_result, alpha = 0.4):
     return vis
  
 
-parser = argparse.ArgumentParser(description="resize image using bicubic upsampling")
+parser = argparse.ArgumentParser(description="")
 parser.add_argument("--config_file", default='./work_dirs/upernet_swin_base_patch4_window12_512x512_160k_egohos_handobj2_pretrain_480x360_22K/upernet_swin_base_patch4_window12_512x512_160k_egohos_handobj2_pretrain_480x360_22K.py', type=str)
 parser.add_argument("--checkpoint_file", default='./work_dirs/upernet_swin_base_patch4_window12_512x512_160k_egohos_handobj2_pretrain_480x360_22K/best_mIoU_iter_42000.pth', type=str)
 parser.add_argument("--img_dir", default='../data/train/image', type=str)
@@ -43,11 +43,12 @@ for file in tqdm(glob.glob(args.img_dir + '/*')):
     fname = os.path.basename(file).split('.')[0]
     img = np.array(Image.open(os.path.join(args.img_dir, fname + '.jpg')))
     seg_result = inference_segmentor(model, file)[0]
-    # vis = visualize_segmentation(img, seg_result, alpha = alpha)
-    # imsave(os.path.join(args.vis_dir, fname + '.jpg'), vis)
-    imsave(os.path.join(args.seg_dir, fname + '.png'), seg_result)
+    vis = visualize_segmentation(img, seg_result, alpha = alpha)
+    imsave(os.path.join(args.vis_dir, fname + '.jpg'), vis)
+    imsave(os.path.join(args.seg_dir, fname + '.png'), seg_result.astype(np.uint8))
+
+    
 
     # pdb.set_trace()
-
 
 

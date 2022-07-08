@@ -7,9 +7,9 @@ crop_size = (360, 480)
 train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='LoadAnnotations', reduce_zero_label=False),
-    dict(type='Resize', img_scale=(360, 480), ratio_range=(0.5, 2.0)),
-    dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
-    dict(type='RandomFlip', prob=0.5),
+    dict(type='Resize', img_scale=(360, 480), ratio_range=(1.0, 1.0)),
+    # dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=1.0),
+    dict(type='RandomFlip', prob=0.0),
     dict(type='PhotoMetricDistortion'),
     dict(type='Normalize', **img_norm_cfg),
     dict(type='Pad', size=crop_size, pad_val=0, seg_pad_val=255),
@@ -38,19 +38,19 @@ data = dict(
         type=dataset_type,
         data_root=data_root,
         img_dir='train/image',
-        ann_dir='train/label',
+        ann_dir='train/label_obj2',
         pipeline=train_pipeline),
     val=dict(
         type=dataset_type,
         data_root=data_root,
         img_dir='val/image',
-        ann_dir='val/label',
+        ann_dir='val/label_obj2',
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
         data_root=data_root,
         img_dir='test_indomain/image',
-        ann_dir='test_indomain/label',
+        ann_dir='test_indomain/label_obj2',
         pipeline=test_pipeline))
 
 

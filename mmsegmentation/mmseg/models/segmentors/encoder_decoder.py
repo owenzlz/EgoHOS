@@ -9,6 +9,15 @@ from .. import builder
 from ..builder import SEGMENTORS
 from .base import BaseSegmentor
 
+import os
+import pdb
+import random
+from PIL import Image, ImageOps
+import numpy as np 
+from torchvision.transforms.functional import to_tensor
+from torchvision.utils import save_image
+
+additional_channel = False
 
 @SEGMENTORS.register_module()
 class EncoderDecoder(BaseSegmentor):
@@ -70,7 +79,38 @@ class EncoderDecoder(BaseSegmentor):
     def encode_decode(self, img, img_metas):
         """Encode images with backbone and decode into a semantic segmentation
         map of the same size as input."""
-        x = self.extract_feat(img)
+
+        if additional_channel:
+                    
+            img_h, img_w = img.shape[2], img.shape[3]; target_aspect_ratio = img_h / img_w
+            aux_list = torch.zeros((img.shape[0], 1, img.shape[2], img.shape[3])).to(img.device)
+            for i in range(img.shape[0]):
+                img_file = img_metas[i]['filename']
+                path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands')
+                fname = os.path.basename(img_file).split('.')[0] + '.png'
+                msk_file = os.path.join(path, fname)
+
+                aux = Image.open(msk_file); aux_w, aux_h = aux.size[0], aux.size[1]
+                if aux_h / aux_w < target_aspect_ratio:
+                    new_aux_h = int(target_aspect_ratio * aux_w)
+                    aux = ImageOps.pad(aux, (aux_w, new_aux_h), centering=(0,0))
+                else:
+                    new_aux_w = int(aux_h / target_aspect_ratio)
+                    aux = ImageOps.pad(aux, (new_aux_w, aux_h), centering=(0,0))
+
+                aux = torch.from_numpy(np.array(aux.resize((img_w, img_h)))).unsqueeze(0).to(img[i].device).float()
+                aux_list[i] = aux
+            
+            cat_input = torch.cat([img, aux_list], dim = 1)
+            # if random.uniform(0, 1) > 0.5:
+            #     cat_input = torch.flip(cat_input, dims = [3])
+            #     gt_semantic_seg = torch.flip(gt_semantic_seg, dims = [3])
+            x = self.extract_feat(cat_input)
+        
+        else:
+
+            x = self.extract_feat(img)
+        
         out = self._decode_head_forward_test(x, img_metas)
         out = resize(
             input=out,
@@ -82,6 +122,9 @@ class EncoderDecoder(BaseSegmentor):
     def _decode_head_forward_train(self, x, img_metas, gt_semantic_seg):
         """Run forward function and calculate loss for decode head in
         training."""
+
+        
+
         losses = dict()
         loss_decode = self.decode_head.forward_train(x, img_metas,
                                                      gt_semantic_seg,
@@ -136,10 +179,39 @@ class EncoderDecoder(BaseSegmentor):
             dict[str, Tensor]: a dictionary of loss components
         """
 
-        x = self.extract_feat(img)
+        if additional_channel: 
+
+            img_h, img_w = img.shape[2], img.shape[3]; target_aspect_ratio = img_h / img_w
+            aux_list = torch.zeros((img.shape[0], 1, img.shape[2], img.shape[3])).to(img.device)
+            for i in range(img.shape[0]):
+                img_file = img_metas[i]['filename']
+                path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands')
+                fname = os.path.basename(img_file).split('.')[0] + '.png'
+                msk_file = os.path.join(path, fname)
+
+                aux = Image.open(msk_file); aux_w, aux_h = aux.size[0], aux.size[1]
+                if aux_h / aux_w < target_aspect_ratio:
+                    new_aux_h = int(target_aspect_ratio * aux_w)
+                    aux = ImageOps.pad(aux, (aux_w, new_aux_h), centering=(0,0))
+                else:
+                    new_aux_w = int(aux_h / target_aspect_ratio)
+                    aux = ImageOps.pad(aux, (new_aux_w, aux_h), centering=(0,0))
+
+                aux = torch.from_numpy(np.array(aux.resize((img_w, img_h)))).unsqueeze(0).to(img[i].device).float()
+                aux_list[i] = aux
+            
+            cat_input = torch.cat([img, aux_list], dim = 1)
+            if random.uniform(0, 1) > 0.5:
+                cat_input = torch.flip(cat_input, dims = [3])
+                gt_semantic_seg = torch.flip(gt_semantic_seg, dims = [3])
+            x = self.extract_feat(cat_input)
+
+        else:
+
+            x = self.extract_feat(img)
 
         losses = dict()
-
+        
         loss_decode = self._decode_head_forward_train(x, img_metas,
                                                       gt_semantic_seg)
         losses.update(loss_decode)
