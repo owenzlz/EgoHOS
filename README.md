@@ -49,22 +49,22 @@ gdown ...
 
 Depending on the application scenarios, you can choose to run one of these commands to generate the segmentation predictions. 
 
-- Inference for predicting left and right hands
+- Predict left and right hands
 ```bash
 bash ...
 ```
 
-- Inference for predicting dense contact boundary
+- Predict dense contact boundary between and hands and interacting objects
 ```bash
 bash ...
 ```
 
-- Inference for predicting hands and (only 1st order) interacting objects 
+- Predict hands and (1st order) interacting objects 
 ```bash
 bash ...
 ```
 
-- Inference for predicting hands and (both 1st and 2nd orders) interacting objects 
+- Predict hands and (both 1st and 2nd orders) interacting objects 
 ```bash
 bash ...
 ```
