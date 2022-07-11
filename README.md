@@ -46,7 +46,7 @@ gdown ...
 
 The dataset structure is as follows: 
 ```bash
-- [dataset root]
+- [egohos dataset root]
     |- train
         |- image
         |- label
@@ -70,6 +70,12 @@ In each label image, the category ids are referred as follows:
 0 -> background
 1 -> left hand
 2 -> right hand
+3 -> 1st order interacting object by left hand
+4 -> 1st order interacting object by right hand
+5 -> 1st order interacting object by both hands
+6 -> 2nd order interacting object by left hand
+7 -> 2nd order interacting object by right hand
+8 -> 2nd order interacting object by both hands
 ```
 
 ## Usage
