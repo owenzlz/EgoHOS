@@ -16,7 +16,6 @@ Fine-Grained Egocentric Hand-Object Segmentation \
 3. [Usage](#pretrained) - quickstart with pretrained models<br>
 
 
-
 ## Setup
 - Clone this repo:
 ```bash
@@ -24,7 +23,7 @@ git clone https://github.com/owenzlz/EgoHOS
 ```
 
 - Install dependencies:
-	- our code follows the mmsegmentation codebase, so you will need an environment compatible with mmsegmentation (https://mmsegmentation.readthedocs.io/en/latest/). Please feel free to refer to the mmsegmentation install documents. 
+	- our code follows the mmsegmentation codebase, so you will need an environment compatible with mmsegmentation (https://mmsegmentation.readthedocs.io/en/latest/).
 ```bash
 pip install -U openmim
 mim install mmcv-full
@@ -39,10 +38,33 @@ bash download_checkpoints.sh
 ```
 
 
-
 ## Datasets
 - Download our dataset from GDrive links. 
 ```bash
 gdown ...
 ```
 
+
+## Usage
+
+Depending on the application scenarios, you can choose to run one of these commands to generate the segmentation predictions. 
+
+- Inference for predicting left and right hands
+```bash
+bash ...
+```
+
+- Inference for predicting dense contact boundary
+```bash
+bash ...
+```
+
+- Inference for predicting hands and (only 1st order) interacting objects 
+```bash
+bash ...
+```
+
+- Inference for predicting hands and (both 1st and 2nd orders) interacting objects 
+```bash
+bash ...
+```
