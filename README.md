@@ -12,7 +12,9 @@ Fine-Grained Egocentric Hand-Object Segmentation \
 
 **Table of Contents:**<br>
 1. [Setup](#setup) - download pretrained models and resources
-2. [Usage](#pretrained) - quickstart with pretrained models<br>
+2. [Datasets](#datasets) - download our egocentric hand-object segmentation datasets
+3. [Usage](#pretrained) - quickstart with pretrained models<br>
+
 
 
 ## Setup
@@ -31,9 +33,16 @@ pip install -v -e .
 ```
 
 - Download resources:
-	- we provide a script for downloading associated resources. Fetch these by running:
+	- we provide a script for downloading the pretrained checkpoints. 
 ```bash
-bash resources/download_resources.sh
+bash download_checkpoints.sh
 ```
 
+
+
+## Datasets
+- Download our dataset from GDrive links. 
+```bash
+gdown ...
+```
 
