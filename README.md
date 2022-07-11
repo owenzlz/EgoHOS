@@ -47,12 +47,29 @@ gdown ...
 The dataset structure is as follows: 
 ```bash
 - [dataset root]
-|--- train
-    |- image
-    |- label
-|- val 
-    |- image
-    |- label
+    |- train
+        |- image
+        |- label
+        |- contact
+    |- val 
+        |- image
+        |- label
+        |- contact
+    |- test_indomain
+        |- image
+        |- label
+        |- contact
+    |- test_outdomain
+        |- image
+        |- label
+        |- contact
+```
+
+In each label image, the category ids are referred as follows: 
+```bash
+0 -> background
+1 -> left hand
+2 -> right hand
 ```
 
 ## Usage
