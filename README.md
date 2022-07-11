@@ -39,7 +39,7 @@ bash download_checkpoints.sh
 
 
 ## Datasets
-- Download our dataset from GDrive links (), or use the following command line. 
+- Download our dataset from GDrive links (), or use the following command line.
 ```bash
 gdown ...
 ```
@@ -65,7 +65,7 @@ The dataset structure is as follows:
         |- contact
 ```
 
-In each label image, the category ids are referred as follows: 
+In each label image, the category ids are referred as below. In the contact image, 'ones' indicate the dense contact region.  
 ```bash
 0 -> background
 1 -> left hand
