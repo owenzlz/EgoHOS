@@ -24,6 +24,7 @@ def visualize_segmentation(img, seg_result, alpha = 0.4):
     return vis
  
 
+
 parser = argparse.ArgumentParser(description="")
 parser.add_argument("--config_file", default='./work_dirs/upernet_swin_base_patch4_window12_512x512_160k_egohos_handobj2_pretrain_480x360_22K/upernet_swin_base_patch4_window12_512x512_160k_egohos_handobj2_pretrain_480x360_22K.py', type=str)
 parser.add_argument("--checkpoint_file", default='./work_dirs/upernet_swin_base_patch4_window12_512x512_160k_egohos_handobj2_pretrain_480x360_22K/best_mIoU_iter_42000.pth', type=str)
@@ -50,5 +51,4 @@ for file in tqdm(glob.glob(args.img_dir + '/*')):
     
 
     # pdb.set_trace()
-
 

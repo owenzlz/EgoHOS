@@ -17,7 +17,8 @@ import numpy as np
 from torchvision.transforms.functional import to_tensor
 from torchvision.utils import save_image
 
-additional_channel = False
+additional_channel = True
+use_ccda = True
 
 @SEGMENTORS.register_module()
 class EncoderDecoder(BaseSegmentor):
@@ -86,7 +87,10 @@ class EncoderDecoder(BaseSegmentor):
             aux_list = torch.zeros((img.shape[0], 1, img.shape[2], img.shape[3])).to(img.device)
             for i in range(img.shape[0]):
                 img_file = img_metas[i]['filename']
-                path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands')
+                if use_ccda:
+                    path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands_ccda')
+                else:
+                    path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands')
                 fname = os.path.basename(img_file).split('.')[0] + '.png'
                 msk_file = os.path.join(path, fname)
 
@@ -185,7 +189,10 @@ class EncoderDecoder(BaseSegmentor):
             aux_list = torch.zeros((img.shape[0], 1, img.shape[2], img.shape[3])).to(img.device)
             for i in range(img.shape[0]):
                 img_file = img_metas[i]['filename']
-                path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands')
+                if use_ccda:
+                    path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands_ccda')
+                else:
+                    path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands')
                 fname = os.path.basename(img_file).split('.')[0] + '.png'
                 msk_file = os.path.join(path, fname)
 

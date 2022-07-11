@@ -10,5 +10,5 @@
 # /mmsegmentation
 /data
 
-
+/preprocess_script/merge_data.py
 

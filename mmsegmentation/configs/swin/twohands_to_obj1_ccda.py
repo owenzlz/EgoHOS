@@ -1,5 +1,5 @@
 _base_ = [
-    '../_base_/models/upernet_swin.py', '../_base_/datasets/egohos_obj2_ccda.py',
+    '../_base_/models/upernet_swin.py', '../_base_/datasets/egohos_obj1_ccda.py',
     '../_base_/default_runtime.py', '../_base_/schedules/schedule_160k.py'
 ]
 
@@ -15,8 +15,8 @@ model = dict(
         depths=[2, 2, 18, 2],
         num_heads=[4, 8, 16, 32],
         window_size=12),
-    decode_head=dict(in_channels=[128, 256, 512, 1024], num_classes=7),
-    auxiliary_head=dict(in_channels=512, num_classes=7))
+    decode_head=dict(in_channels=[128, 256, 512, 1024], num_classes=4),
+    auxiliary_head=dict(in_channels=512, num_classes=4))
 
 train_pipeline = [dict(type='LoadAnnotations', reduce_zero_label=False)]
 

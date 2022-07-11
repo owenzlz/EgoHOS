@@ -48,7 +48,7 @@ lr_config = dict(
 # By default, models are trained on 8 GPUs with 2 images per GPU
 data = dict(samples_per_gpu=8)
 
-checkpoint_config = dict(by_epoch=False, interval=2000)
+# checkpoint_config = dict(by_epoch=False, interval=2000)
 evaluation = dict(interval=2000, metric=['mIoU', 'mFscore'], pred_eval=True, save_best='mIoU')
 
 

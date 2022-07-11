@@ -23,14 +23,19 @@ model = init_segmentor(args.config_file, args.checkpoint_file, device='cuda:0')
 
 os.makedirs(args.pred_seg_dir, exist_ok = True)
 
-alpha = 0.3
+alpha = 0.5
 for file in tqdm(glob.glob(args.img_dir + '/*')):
     fname = os.path.basename(file).split('.')[0]
     img = np.array(Image.open(os.path.join(args.img_dir, fname + '.jpg')))
     seg_result = inference_segmentor(model, file)[0]
+    # print(np.unique(seg_result))
+    # red = np.zeros((img.shape)); red[:,:,0] = 255
+    # seg_result = np.repeat(np.expand_dims(seg_result, 2), 3, 2)
+    # vis = img * (1 - seg_result) + alpha * seg_result * red + img * seg_result * (1 - alpha)
+    # imsave('vis.jpg', vis)
     # pdb.set_trace()
     imsave(os.path.join(args.pred_seg_dir, fname + '.png'), seg_result.astype(np.uint8))
 
 
-
+    
 
