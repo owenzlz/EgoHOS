@@ -14,6 +14,8 @@ Fine-Grained Egocentric Hand-Object Segmentation \
 1. [Setup](#setup) - download pretrained models and resources
 2. [Usage](#pretrained) - quickstart with pretrained models<br>
 
+
+## Setup
 - Clone this repo:
 ```bash
 git clone https://github.com/owenzlz/EgoHOS
