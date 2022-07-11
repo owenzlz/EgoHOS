@@ -44,6 +44,16 @@ bash download_checkpoints.sh
 gdown ...
 ```
 
+The dataset structure is as follows: 
+```bash
+- [dataset root]
+|- train
+    |- image
+    |- label
+|- val 
+    |- image
+    |- label
+```
 
 ## Usage
 
