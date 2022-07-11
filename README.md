@@ -47,7 +47,7 @@ gdown ...
 The dataset structure is as follows: 
 ```bash
 - [dataset root]
-|- train
+|--- train
     |- image
     |- label
 |- val 
