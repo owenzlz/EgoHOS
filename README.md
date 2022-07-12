@@ -47,7 +47,7 @@ bash download_checkpoints.sh
 gdown ...
 ```
 
-The dataset structure is as follows: 
+Once you have downloaded the dataset, the dataset is structured as follows: 
 ```bash
 - [egohos dataset root]
     |- train
@@ -83,7 +83,7 @@ In each label image, the category ids are referred as below. In the contact labe
 
 ## Quick Usage
 
-Depending on the application scenarios, you can choose to run one of these commands to generate the segmentation predictions. 
+Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. 
 
 - Predict left and right hands
 ```bash
