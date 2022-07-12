@@ -1,7 +1,7 @@
 # EgoHOS
 [Project Page](https://chail.github.io/latent-composition/) |  [Paper] | [Bibtex]
 
-<img src="https://github.com/owenzlz/EgoHOS/blob/main/stitch.gif"/>
+<img src="https://github.com/owenzlz/EgoHOS/blob/main/stitch.gif" style="width:100%;"/>
 
 **Fine-Grained Egocentric Hand-Object Segmentation: Dataset, Model, and Applications**\
 *European Conference on Computer Vision (ECCV), 2022*\
