@@ -16,7 +16,7 @@
 **Table of Contents:**<br>
 1. [Setup](#setup) - download pretrained models and resources
 2. [Datasets](#datasets) - download our egocentric hand-object segmentation datasets
-3. [Usage](#pretrained) - quickstart with pretrained models<br>
+3. [Quick Usage](#pretrained) - quickstart with pretrained models<br>
 
 
 ## Setup
@@ -81,7 +81,7 @@ In each label image, the category ids are referred as below. In the contact imag
 8 -> 2nd order interacting object by both hands
 ```
 
-## Usage
+## Quick Usage
 
 Depending on the application scenarios, you can choose to run one of these commands to generate the segmentation predictions. 
 
