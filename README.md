@@ -47,7 +47,7 @@ bash download_checkpoints.sh
 gdown ...
 ```
 
-Once you have downloaded the dataset, the dataset is structured as follows: 
+After downloading, the dataset is structured as follows: 
 ```bash
 - [egohos dataset root]
     |- train
