@@ -9,6 +9,7 @@
 
 # /mmsegmentation
 /data
+/data_to_release
 
 /preprocess_script/merge_data.py
 

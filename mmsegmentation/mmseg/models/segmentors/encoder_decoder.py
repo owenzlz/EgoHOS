@@ -17,8 +17,8 @@ import numpy as np
 from torchvision.transforms.functional import to_tensor
 from torchvision.utils import save_image
 
-additional_channel = True
-use_ccda = True
+additional_channel = False
+use_ccda = False
 
 @SEGMENTORS.register_module()
 class EncoderDecoder(BaseSegmentor):

@@ -67,26 +67,26 @@ def cvt_lbl(src_lbl_dir, dst_lbl_dir, mode):
 
 if __name__ == '__main__':
 
-    # lbl_type_list = ['train', 'val', 'test_indomain', 'test_outdomain']
-    lbl_type_list = ['train']
+    lbl_type_list = ['train', 'val', 'test_indomain', 'test_outdomain']
+    # lbl_type_list = ['train']
     
     for lbl_type in lbl_type_list:
         
-        lbl_dir = '../data/'+lbl_type+'/label_ccda'
+        lbl_dir = '../data/'+lbl_type+'/label'
 
-        lbl_twohands_dir = '../data/'+lbl_type+'/label_twohands_ccda'
+        lbl_twohands_dir = '../data/'+lbl_type+'/label_twohands'
         cvt_lbl(lbl_dir, lbl_twohands_dir, 'twohands')
 
-        lbl_handobj1_dir = '../data/'+lbl_type+'/label_handobj1_ccda'
+        lbl_handobj1_dir = '../data/'+lbl_type+'/label_handobj1'
         cvt_lbl(lbl_dir, lbl_handobj1_dir, 'handobj1')
 
-        lbl_handobj1_dir = '../data/'+lbl_type+'/label_obj1_ccda'
+        lbl_handobj1_dir = '../data/'+lbl_type+'/label_obj1'
         cvt_lbl(lbl_dir, lbl_handobj1_dir, 'obj1')
 
-        lbl_handobj1_dir = '../data/'+lbl_type+'/label_obj2_ccda'
+        lbl_handobj1_dir = '../data/'+lbl_type+'/label_obj2'
         cvt_lbl(lbl_dir, lbl_handobj1_dir, 'obj2')
 
-        lbl_allhands_dir = '../data/'+lbl_type+'/label_allhands_ccda'
+        lbl_allhands_dir = '../data/'+lbl_type+'/label_allhands'
         cvt_lbl(lbl_dir, lbl_allhands_dir, 'allhands')
         
         # lbl_handobj1_dir = '../data/'+lbl_type+'/label_foreground'
