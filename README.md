@@ -1,5 +1,5 @@
 # EgoHOS
-[Project Page](https://chail.github.io/latent-composition/) |  [Paper] | [Bibtex]
+[Project Page](https://www.seas.upenn.edu/~shzhou2/projects/eos_dataset/) |  [Paper] | [Bibtex]
 
 <img src="https://github.com/owenzlz/EgoHOS/blob/main/stitch.gif" style="width:800px;">
 
