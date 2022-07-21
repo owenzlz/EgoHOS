@@ -18,7 +18,7 @@ for lbl_type in lbl_type_list:
     all_label_dir = '../data/'+lbl_type+'/label'
 
     vis_contact_boundary_dir = '../data/'+lbl_type+'/vis_contact'
-    contact_boundary_dir = '../data/'+lbl_type+'/contact'
+    contact_boundary_dir = '../data/'+lbl_type+'/label_contact'
     os.makedirs(vis_contact_boundary_dir, exist_ok = True)
     os.makedirs(contact_boundary_dir, exist_ok = True)
 

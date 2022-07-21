@@ -44,7 +44,7 @@ bash download_checkpoints.sh
 ## Datasets
 - Download our dataset from GDrive links (), or use the following command line.
 ```bash
-gdown ...
+bash download_datasets.sh
 ```
 
 After downloading, the dataset is structured as follows: 
