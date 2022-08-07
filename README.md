@@ -35,7 +35,7 @@ pip install -v -e .
 For more information, please refer to MMSegmentation: https://mmsegmentation.readthedocs.io/en/latest/
 
 ## Datasets
-- Download our dataset from GDrive links (), or use the following command line.
+- Download our dataset using the following command line.
 ```bash
 bash download_datasets.sh
 ```
