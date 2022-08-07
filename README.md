@@ -145,7 +145,7 @@ Let's first download a test video for running the demo.
 - Download test images:
 	- we provide a script for downloading a few test images. 
 ```bash
-bash download_testimages.sh
+bash download_testvideos.sh
 ```
 
 - Predict hands and (1st order) interacting objects. 
