@@ -21,12 +21,14 @@ def visualize_cb(img, seg_result, alpha = 0.4):
     vis = img * (1 - alpha) + seg_color * alpha
     return vis
 
-def visualize_obj1(img, seg_result, alpha = 0.4):
+def visualize_twohands_obj1(img, seg_result, alpha = 0.4):
     seg_color = np.zeros((img.shape))
     seg_color[seg_result == 0] = (0,    0,   0)     # background
-    seg_color[seg_result == 1] = (255,  0,   255)   # left_object1
-    seg_color[seg_result == 2] = (0,    255, 255)   # right_object1
-    seg_color[seg_result == 3] = (0,    255, 0)     # two_object1
+    seg_color[seg_result == 1] = (255,  0,   0)     # left_hand
+    seg_color[seg_result == 2] = (0,    0,   255)   # right_hand
+    seg_color[seg_result == 3] = (255,  0,   255)   # left_object1
+    seg_color[seg_result == 4] = (0,    255, 255)   # right_object1
+    seg_color[seg_result == 5] = (0,    255, 0)     # two_object1
     vis = img * (1 - alpha) + seg_color * alpha
     return vis
 
@@ -78,10 +80,15 @@ if __name__ == '__main__':
 
         elif args.mode == 'twohands_obj1':
             twohands = np.array(Image.open(os.path.join(args.twohands_dir, fname + '.png')))
-            twohands_vis = visualize_twohands(img, twohands)
             obj1 = np.array(Image.open(os.path.join(args.obj1_dir, fname + '.png')))
-            twohands_obj1_vis = visualize_obj1(twohands_vis, obj1)
+            twohands_obj1 = twohands.copy()
+            twohands_obj1[obj1 == 1] = 3
+            twohands_obj1[obj1 == 2] = 4
+            twohands_obj1[obj1 == 3] = 5
+            twohands_obj1_vis = visualize_twohands_obj1(img, twohands_obj1)
             imsave(os.path.join(args.vis_dir, fname + '.jpg'), twohands_obj1_vis)
 
             # pdb.set_trace()
+
+
 

@@ -11,6 +11,9 @@
 /data
 /data_to_release
 /testimages
+/testvideos
 
 /preprocess_script/merge_data.py
+
+
 
