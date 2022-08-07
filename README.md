@@ -7,7 +7,7 @@
 *European Conference on Computer Vision (ECCV), 2022*\
 [Lingzhi Zhang*](https://owenzlz.github.io/), [Shenghao Zhou*](https://scholar.google.com/citations?user=kWdwbUYAAAAJ&hl=en), [Simon Stent](https://scholar.google.com/citations?user=f3aij5UAAAAJ&hl=en), [Jianbo Shi](https://www.cis.upenn.edu/~jshi/) (* indicates equal contribution)
 
-In this project, our main goal is to improve the generalization performance of hand-object segmentation on the in-the-wild egocentric videos. 
+In this project, our main goal is to provide a tool for robust hand-object segmentation on the in-the-wild egocentric videos. 
 
 ## Prerequisites
 - Linux
