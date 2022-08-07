@@ -26,13 +26,13 @@ git clone https://github.com/owenzlz/EgoHOS
 ```
 
 - Install dependencies:
-For more information, please refer to mmsegmentation: https://mmsegmentation.readthedocs.io/en/latest/
 ```bash
 pip install -U openmim
 mim install mmcv-full
 cd mmsegmentation
 pip install -v -e .
 ```
+For more information, please refer to mmsegmentation: https://mmsegmentation.readthedocs.io/en/latest/
 
 ## Datasets
 - Download our dataset from GDrive links (), or use the following command line.
