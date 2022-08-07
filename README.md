@@ -106,3 +106,14 @@ bash ...
 ```bash
 bash ...
 ```
+
+## Quick Inference on Videos
+
+
+- Predict hands and (1st order) interacting objects. Input: RGB image, hand masks, contact boundary mask
+```bash
+bash ...
+```
+
+
+
