@@ -8,15 +8,15 @@ checkpoint_file = 'https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/s
 model = dict(
     pretrained = './pretrain/upernet_swin_base_patch4_window12_512x512_160k_ade20k_pretrain_384x384_22K_20210531_125459-429057bf.pth', 
     backbone=dict(
-        in_channels = 4,
+        in_channels = 5,
         # init_cfg=dict(type='Pretrained', checkpoint=checkpoint_file),
         pretrain_img_size=384,
         embed_dims=128,
         depths=[2, 2, 18, 2],
         num_heads=[4, 8, 16, 32],
         window_size=12),
-    decode_head=dict(in_channels=[128, 256, 512, 1024], num_classes=7),
-    auxiliary_head=dict(in_channels=512, num_classes=7))
+    decode_head=dict(in_channels=[128, 256, 512, 1024], num_classes=4),
+    auxiliary_head=dict(in_channels=512, num_classes=4))
 
 train_pipeline = [dict(type='LoadAnnotations', reduce_zero_label=False)]
 
@@ -52,5 +52,7 @@ data = dict(samples_per_gpu=8)
 evaluation = dict(interval=2000, metric=['mIoU', 'mFscore'], pred_eval=True, save_best='mIoU')
 
 
-
+additional_channel = 'twohands_cb' # NONE, twohands, twohands_cb
+twohands_dir = '/mnt/session_space/home/lingzzha/EgoHOS/testimages/pred_twohands'
+cb_dir = '/mnt/session_space/home/lingzzha/EgoHOS/testimages/pred_cb'
 

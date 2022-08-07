@@ -52,6 +52,10 @@
 # rgb + twohands + cb -> obj2                                                     [*]
 # python tools/train.py ./configs/swin/twohands_cb_to_obj2.py # single gpu test
 
+# rgb + twohands + cb -> obj2 (CCDA)                                              [*]
+# python tools/train.py ./configs/swin/twohands_cb_to_obj2_ccda.py # single gpu test
+./tools/dist_train.sh ./configs/swin/twohands_cb_to_obj2_ccda.py 8
+
 # rgb + twohands + cb -> obj1                                                     [TODO]
 # python tools/train.py ./configs/swin/twohands_cb_to_obj1.py # single gpu test
 # ./tools/dist_train.sh ./configs/swin/twohands_cb_to_obj1.py 8
@@ -62,7 +66,7 @@
 
 # rgb + twohands -> obj1 (CCDA)                                                   [RUNING]
 # python tools/train.py ./configs/swin/twohands_to_obj1_ccda.py # single gpu test
-./tools/dist_train.sh ./configs/swin/twohands_cb_to_obj1_ccda.py 8
+# ./tools/dist_train.sh ./configs/swin/twohands_cb_to_obj1_ccda.py 8
 
 # rgb + twohands -> cb (CCDA)                                                     [RUNING]
 # python tools/train.py ./configs/swin/twohands_to_cb_ccda.py # single gpu test
