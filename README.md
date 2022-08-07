@@ -19,6 +19,8 @@ In this project, we signicantly improve the hand-object segmentation generalizat
 2. [Datasets](#datasets) - download our egocentric hand-object segmentation datasets
 3. [Checkpoints](#checkpoints) - download the checkpoints for all our models
 4. [Inference on Images](#inference_on_images) - quick inference on images<br>
+5. [Inference on Videos](#inference_on_videos) - quick inference on images<br>
+
 
 
 ## Setup
@@ -35,6 +37,8 @@ cd mmsegmentation
 pip install -v -e .
 ```
 For more information, please refer to MMSegmentation: https://mmsegmentation.readthedocs.io/en/latest/
+
+<a name="datasets"/>
 
 ## Datasets
 - Download our dataset using the following command line.
@@ -76,6 +80,8 @@ In each label image, the category ids are referred as below. In the contact labe
 8 -> 2nd order interacting object by both hands
 ```
 
+<a name="checkpoints"/>
+
 ## Checkpoints
 
 - Download resources:
@@ -91,6 +97,7 @@ bash download_testimages.sh
 ```
 
 <a name="inference_on_images"/>
+
 ## Inference on Images
 
 Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. Please modify the image directory paths in the bash file if needed. The backen segmentation model is Swin-L backbone with UPerNet head. 
@@ -126,6 +133,8 @@ bash pred_obj1.sh
 ```bash
 bash pred_obj2.sh
 ```
+
+<a name="inference_on_videos"/>
 
 ## Inference on Videos
 
