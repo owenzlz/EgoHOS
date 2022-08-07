@@ -7,6 +7,7 @@
 *European Conference on Computer Vision (ECCV), 2022*\
 [Lingzhi Zhang*](https://owenzlz.github.io/), [Shenghao Zhou*](https://scholar.google.com/citations?user=kWdwbUYAAAAJ&hl=en), [Simon Stent](https://scholar.google.com/citations?user=f3aij5UAAAAJ&hl=en), [Jianbo Shi](https://www.cis.upenn.edu/~jshi/) (* indicates equal contribution)
 
+In this project, we signicantly improve the hand-object segmentation performance in the in-the-wild images/videos. 
 
 ## Prerequisites
 - Linux
