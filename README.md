@@ -139,10 +139,13 @@ bash pred_obj2.sh
 
 - Predict hands and (1st order) interacting objects. 
 ```bash
-bash ...
+bash pred_obj1_video.sh
 ```
 
-
+- Predict hands and (1st and 2nd orders) interacting objects. 
+```bash
+bash pred_obj2_video.sh
+```
 
 
 

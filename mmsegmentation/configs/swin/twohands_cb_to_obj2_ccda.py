@@ -15,8 +15,8 @@ model = dict(
         depths=[2, 2, 18, 2],
         num_heads=[4, 8, 16, 32],
         window_size=12),
-    decode_head=dict(in_channels=[128, 256, 512, 1024], num_classes=4),
-    auxiliary_head=dict(in_channels=512, num_classes=4))
+    decode_head=dict(in_channels=[128, 256, 512, 1024], num_classes=7),
+    auxiliary_head=dict(in_channels=512, num_classes=7))
 
 train_pipeline = [dict(type='LoadAnnotations', reduce_zero_label=False)]
 
@@ -55,4 +55,5 @@ evaluation = dict(interval=2000, metric=['mIoU', 'mFscore'], pred_eval=True, sav
 additional_channel = 'twohands_cb' # NONE, twohands, twohands_cb
 twohands_dir = '/mnt/session_space/home/lingzzha/EgoHOS/testimages/pred_twohands'
 cb_dir = '/mnt/session_space/home/lingzzha/EgoHOS/testimages/pred_cb'
+
 
