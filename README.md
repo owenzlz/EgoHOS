@@ -106,22 +106,22 @@ If you only want to predict only hand/contact segmentation, or want to use each 
 
 - Predict left and right hands. Required input: RGB image
 ```bash
-bash ...
+bash pred_twohands.sh
 ```
 
 - Predict dense contact boundary between and hands and interacting objects. Required input: RGB image, hand mask
 ```bash
-bash ...
+bash pred_cb.sh
 ```
 
 - Predict hands and (1st order) interacting objects. Required input: RGB image, hand mask, contact boundary mask
 ```bash
-bash ...
+bash pred_obj1.sh
 ```
 
 - Predict hands and (both 1st and 2nd orders) interacting objects. Required input: RGB image, hand mask, contact boundary mask
 ```bash
-bash ...
+bash pred_obj2.sh
 ```
 
 ## Quick Inference on Videos
