@@ -94,9 +94,7 @@ bash download_checkpoints.sh
 
 ## Inference on Images
 
-Let's first download a few test images for running the demo. 
-
-- Download test images:
+- Let's first download a few test images for running the demo:
 ```bash
 bash download_testimages.sh
 ```
@@ -139,9 +137,7 @@ bash pred_obj2.sh
 
 ## Inference on Videos
 
-Let's first download a test video for running the demo. 
-
-- Download test images:
+- Let's first download a few test videos for running the demo:
 ```bash
 bash download_testvideos.sh
 ```
