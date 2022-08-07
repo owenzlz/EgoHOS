@@ -94,12 +94,12 @@ Depending on the application scenarios, you may want to use one of these command
 
 - Predict two hands, contact boundary, and interacting objects (1st order) sequentially. Required input: RGB image
 ```bash
-bash ...
+bash pred_all_obj1.sh
 ```
 
 - Predict two hands, contact boundary, and interacting objects (1st and 2nd orders) sequentially. Required input: RGB image
 ```bash
-bash ...
+bash pred_all_obj2.sh
 ```
 
 If you only want to predict only hand/contact segmentation, or want to use each module separately, see the commands below. 
