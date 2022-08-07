@@ -26,7 +26,7 @@ git clone https://github.com/owenzlz/EgoHOS
 ```
 
 - Install dependencies:
-	- our code follows the mmsegmentation codebase, so you will need an environment compatible with mmsegmentation (https://mmsegmentation.readthedocs.io/en/latest/).
+	- For more information, please refer to mmsegmentation: https://mmsegmentation.readthedocs.io/en/latest/
 ```bash
 pip install -U openmim
 mim install mmcv-full
