@@ -102,12 +102,12 @@ bash ...
 bash ...
 ```
 
-- Predict hands and (1st order) interacting objects. Required input: RGB image, hand masks, contact boundary
+- Predict hands and (1st order) interacting objects. Required input: RGB image, hand masks, contact boundary mask
 ```bash
 bash ...
 ```
 
-- Predict hands and (both 1st and 2nd orders) interacting objects. Required input: RGB image, hand masks, contact boundary
+- Predict hands and (both 1st and 2nd orders) interacting objects. Required input: RGB image, hand masks, contact boundary mask
 ```bash
 bash ...
 ```
