@@ -89,7 +89,7 @@ bash download_checkpoints.sh
 bash download_testimages.sh
 ```
 
-## Quick Inference on Images
+## Inference on Images
 
 Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. Please modify the image directory paths in the bash file if needed. The backen segmentation model is Swin-L backbone with UPerNet head. 
 
@@ -125,12 +125,14 @@ bash pred_obj1.sh
 bash pred_obj2.sh
 ```
 
-## Quick Inference on Videos
+## Inference on Videos
 
 - Predict hands and (1st order) interacting objects. Required input: RGB video
 ```bash
 bash ...
 ```
+
+
 
 
 
