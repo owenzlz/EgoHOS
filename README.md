@@ -74,7 +74,7 @@ In each label image, the category ids are referred as below. In the contact labe
 8 -> 2nd order interacting object by both hands
 ```
 
-## Quick Usage
+## Quick Inference on Images
 
 - Download resources:
 	- we provide a script for downloading the pretrained checkpoints. 
