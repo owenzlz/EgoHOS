@@ -103,40 +103,40 @@ Depending on the application scenarios, you may want to use one of these command
 
 - Predict two hands, contact boundary, and interacting objects (1st order) sequentially. 
 ```bash
-bash pred_all_obj1.sh
+bash mmsegmentation/pred_all_obj1.sh
 ```
 
 <img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/twohands_obj1_optimized.gif" style="width:850px;">
 
 - Predict two hands, contact boundary, and interacting objects (1st and 2nd orders) sequentially. 
 ```bash
-bash pred_all_obj2.sh
+bash mmsegmentation/pred_all_obj2.sh
 ```
 
 If you only want to predict only hand/contact segmentation, or want to use each module separately, see the commands below. 
 
 - Predict only the left and right hands.
 ```bash
-bash pred_twohands.sh
+bash mmsegmentation/pred_twohands.sh
 ```
 
 <img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/twohands_optimized.gif" style="width:850px;">
 
 - Predict the dense contact boundary. 
 ```bash
-bash pred_cb.sh
+bash mmsegmentation/pred_cb.sh
 ```
 
 <img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/cb.gif" style="width:850px;">
 
 - Predict the (1st order) interacting objects. 
 ```bash
-bash pred_obj1.sh
+bash mmsegmentation/pred_obj1.sh
 ```
 
 - Predict the (both 1st and 2nd orders) interacting objects. 
 ```bash
-bash pred_obj2.sh
+bash mmsegmentation/pred_obj2.sh
 ```
 
 <a name="inference_on_videos"/>
@@ -150,12 +150,12 @@ bash download_testvideos.sh
 
 - Predict hands and (1st order) interacting objects. 
 ```bash
-bash pred_obj1_video.sh
+bash mmsegmentation/pred_obj1_video.sh
 ```
 
 - Predict hands and (1st and 2nd orders) interacting objects. 
 ```bash
-bash pred_obj2_video.sh
+bash mmsegmentation/pred_obj2_video.sh
 ```
 
 
