@@ -103,7 +103,7 @@ Depending on the application scenarios, you may want to use one of these command
 
 - Predict two hands, contact boundary, and interacting objects (1st order) sequentially. 
 ```bash
-cd mmsegmentation
+cd mmsegmentation # if you are not in this directory
 bash pred_all_obj1.sh
 ```
 
@@ -111,7 +111,7 @@ bash pred_all_obj1.sh
 
 - Predict two hands, contact boundary, and interacting objects (1st and 2nd orders) sequentially. 
 ```bash
-cd mmsegmentation
+cd mmsegmentation # if you are not in this directory
 bash pred_all_obj2.sh
 ```
 
@@ -119,7 +119,7 @@ If you only want to predict only hand/contact segmentation, or want to use each 
 
 - Predict only the left and right hands.
 ```bash
-cd mmsegmentation
+cd mmsegmentation # if you are not in this directory
 bash pred_twohands.sh
 ```
 
@@ -127,7 +127,7 @@ bash pred_twohands.sh
 
 - Predict the dense contact boundary. 
 ```bash
-cd mmsegmentation
+cd mmsegmentation # if you are not in this directory
 bash pred_cb.sh
 ```
 
@@ -135,7 +135,7 @@ bash pred_cb.sh
 
 - Predict the (1st order) interacting objects. 
 ```bash
-cd mmsegmentation
+cd mmsegmentation # if you are not in this directory
 bash pred_obj1.sh
 ```
 
@@ -156,13 +156,13 @@ bash download_testvideos.sh
 
 - Predict hands and (1st order) interacting objects. 
 ```bash
-cd mmsegmentation
+cd mmsegmentation # if you are not in this directory
 bash pred_obj1_video.sh
 ```
 
 - Predict hands and (1st and 2nd orders) interacting objects. 
 ```bash
-cd mmsegmentation
+cd mmsegmentation # if you are not in this directory
 bash pred_obj2_video.sh
 ```
 
