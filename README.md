@@ -84,8 +84,7 @@ In each label image, the category ids are referred as below. In the contact labe
 
 ## Checkpoints
 
-- Download resources:
-	- we provide a script for downloading the pretrained checkpoints. 
+- Download checkponts and config files:
 ```bash
 bash download_checkpoints.sh
 ```
