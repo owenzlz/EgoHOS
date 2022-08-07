@@ -116,7 +116,7 @@ bash pred_all_obj2.sh
 
 If you only want to predict only hand/contact segmentation, or want to use each module separately, see the commands below. 
 
-- Predict left and right hands. Required input: RGB image
+- Predict left and right hands.
 ```bash
 bash pred_twohands.sh
 ```
