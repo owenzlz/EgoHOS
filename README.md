@@ -1,7 +1,7 @@
 # EgoHOS
 [Project Page](https://www.seas.upenn.edu/~shzhou2/projects/eos_dataset/) |  [Paper] | [Bibtex]
 
-<img src="https://github.com/owenzlz/EgoHOS/blob/main/teaser.gif" style="width:800px;">
+<img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/teaser.gif" style="width:800px;">
 
 **Fine-Grained Egocentric Hand-Object Segmentation: Dataset, Model, and Applications**\
 *European Conference on Computer Vision (ECCV), 2022*\
