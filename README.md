@@ -74,13 +74,16 @@ In each label image, the category ids are referred as below. In the contact labe
 8 -> 2nd order interacting object by both hands
 ```
 
-## Quick Inference on Images
+## Checkpoints
 
 - Download resources:
 	- we provide a script for downloading the pretrained checkpoints. 
 ```bash
 bash download_checkpoints.sh
 ```
+
+
+## Quick Inference on Images
 
 Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. 
 
