@@ -127,6 +127,8 @@ bash pred_twohands.sh
 bash pred_cb.sh
 ```
 
+<img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/cb.gif" style="width:850px;">
+
 - Predict hands and (1st order) interacting objects. 
 ```bash
 bash pred_obj1.sh
