@@ -34,13 +34,6 @@ cd mmsegmentation
 pip install -v -e .
 ```
 
-- Download resources:
-	- we provide a script for downloading the pretrained checkpoints. 
-```bash
-bash download_checkpoints.sh
-```
-
-
 ## Datasets
 - Download our dataset from GDrive links (), or use the following command line.
 ```bash
@@ -83,24 +76,30 @@ In each label image, the category ids are referred as below. In the contact labe
 
 ## Quick Usage
 
+- Download resources:
+	- we provide a script for downloading the pretrained checkpoints. 
+```bash
+bash download_checkpoints.sh
+```
+
 Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. 
 
-- Predict left and right hands
+- Predict left and right hands. Input: RGB image
 ```bash
 bash ...
 ```
 
-- Predict dense contact boundary between and hands and interacting objects
+- Predict dense contact boundary between and hands and interacting objects. Input: RGB image, hand masks
 ```bash
 bash ...
 ```
 
-- Predict hands and (1st order) interacting objects 
+- Predict hands and (1st order) interacting objects. Input: RGB image, hand masks, contact boundary mask
 ```bash
 bash ...
 ```
 
-- Predict hands and (both 1st and 2nd orders) interacting objects 
+- Predict hands and (both 1st and 2nd orders) interacting objects. Input: RGB image, hand masks, contact boundary mask
 ```bash
 bash ...
 ```
