@@ -90,7 +90,7 @@ bash download_testimages.sh
 
 ## Quick Inference on Images
 
-Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. The backen segmentation model is Swin-L backbone with UPerNet head. 
+Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. Please modify the directories in the bash file if needed. The backen segmentation model is Swin-L backbone with UPerNet head. 
 
 - Predict two hands, contact boundary, and interacting objects (1st order) sequentially. Required input: RGB image
 ```bash
