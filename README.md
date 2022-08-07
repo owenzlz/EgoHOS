@@ -89,15 +89,18 @@ In each label image, the category ids are referred as below. In the contact labe
 bash download_checkpoints.sh
 ```
 
+
+<a name="inference_on_images"/>
+
+## Inference on Images
+
+Let's first download a few test images for running the demo. 
+
 - Download test images:
 	- we provide a script for downloading a few test images. 
 ```bash
 bash download_testimages.sh
 ```
-
-<a name="inference_on_images"/>
-
-## Inference on Images
 
 Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. Please modify the image directory paths in the bash file if needed. The backen segmentation model is Swin-L backbone with UPerNet head. 
 
@@ -136,6 +139,14 @@ bash pred_obj2.sh
 <a name="inference_on_videos"/>
 
 ## Inference on Videos
+
+Let's first download a test video for running the demo. 
+
+- Download test images:
+	- we provide a script for downloading a few test images. 
+```bash
+bash download_testimages.sh
+```
 
 - Predict hands and (1st order) interacting objects. 
 ```bash
