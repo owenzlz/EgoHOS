@@ -17,8 +17,8 @@
 1. [Setup](#setup) - download pretrained models and resources
 2. [Datasets](#datasets) - download our egocentric hand-object segmentation datasets
 3. [Checkpoints](#checkpoints) - download the checkpoints for all our models
-4. [Inference on Images](#inference_on_images) - quick inference on images
-5. [Inference on Videos](#inference_on_videos) - quick inference on videos<br>
+4. [Inference on Images](#inference_on_images) - quick usage on images
+5. [Inference on Videos](#inference_on_videos) - quick usage on videos<br>
 
 
 
