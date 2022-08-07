@@ -121,6 +121,8 @@ If you only want to predict only hand/contact segmentation, or want to use each 
 bash pred_twohands.sh
 ```
 
+<img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/twohands_optimized.gif" style="width:850px;">
+
 - Predict dense contact boundary between and hands and interacting objects. 
 ```bash
 bash pred_cb.sh
