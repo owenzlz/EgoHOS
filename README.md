@@ -102,6 +102,7 @@ bash ...
 bash ...
 ```
 
+If you only want to predict only hand/contact segmentation, or want to use each module separately, see the commands below. 
 
 - Predict left and right hands. Required input: RGB image
 ```bash
