@@ -107,7 +107,7 @@ Depending on the application scenarios, you may want to use one of these command
 bash pred_all_obj1.sh
 ```
 
-<img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/twohands_obj1_optimized.gif" style="width:800px;">
+<img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/twohands_obj1_optimized.gif" style="width:850px;">
 
 - Predict two hands, contact boundary, and interacting objects (1st and 2nd orders) sequentially. 
 ```bash
