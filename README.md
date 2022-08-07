@@ -90,6 +90,7 @@ bash download_checkpoints.sh
 bash download_testimages.sh
 ```
 
+<a name="Inference"/>
 ## Inference on Images
 
 Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. Please modify the image directory paths in the bash file if needed. The backen segmentation model is Swin-L backbone with UPerNet head. 
