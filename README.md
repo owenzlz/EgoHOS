@@ -115,26 +115,26 @@ bash pred_all_obj2.sh
 
 If you only want to predict only hand/contact segmentation, or want to use each module separately, see the commands below. 
 
-- Predict left and right hands.
+- Predict only the left and right hands.
 ```bash
 bash pred_twohands.sh
 ```
 
 <img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/twohands_optimized.gif" style="width:850px;">
 
-- Predict dense contact boundary between and hands and interacting objects. 
+- Predict the dense contact boundary. 
 ```bash
 bash pred_cb.sh
 ```
 
 <img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/cb.gif" style="width:850px;">
 
-- Predict hands and (1st order) interacting objects. 
+- Predict the (1st order) interacting objects. 
 ```bash
 bash pred_obj1.sh
 ```
 
-- Predict hands and (both 1st and 2nd orders) interacting objects. 
+- Predict the (both 1st and 2nd orders) interacting objects. 
 ```bash
 bash pred_obj2.sh
 ```
