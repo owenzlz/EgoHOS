@@ -18,7 +18,7 @@ In this project, we signicantly improve the hand-object segmentation generalizat
 1. [Setup](#setup) - download pretrained models and resources
 2. [Datasets](#datasets) - download our egocentric hand-object segmentation datasets
 3. [Checkpoints](#checkpoints) - download the checkpoints for all our models
-4. [Inference on Images](#Inference on Images) - quick inference on images<br>
+4. [Inference on Images](#Inference) - quick inference on images<br>
 
 
 ## Setup
