@@ -102,12 +102,12 @@ bash download_testimages.sh
 
 Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. Please modify the image directory paths in the bash file if needed. The backen segmentation model is Swin-L backbone with UPerNet head. 
 
-- Predict two hands, contact boundary, and interacting objects (1st order) sequentially. Required input: RGB image
+- Predict two hands, contact boundary, and interacting objects (1st order) sequentially. 
 ```bash
 bash pred_all_obj1.sh
 ```
 
-- Predict two hands, contact boundary, and interacting objects (1st and 2nd orders) sequentially. Required input: RGB image
+- Predict two hands, contact boundary, and interacting objects (1st and 2nd orders) sequentially. 
 ```bash
 bash pred_all_obj2.sh
 ```
@@ -119,17 +119,17 @@ If you only want to predict only hand/contact segmentation, or want to use each 
 bash pred_twohands.sh
 ```
 
-- Predict dense contact boundary between and hands and interacting objects. Required input: RGB image, hand mask
+- Predict dense contact boundary between and hands and interacting objects. 
 ```bash
 bash pred_cb.sh
 ```
 
-- Predict hands and (1st order) interacting objects. Required input: RGB image, hand mask, contact boundary mask
+- Predict hands and (1st order) interacting objects. 
 ```bash
 bash pred_obj1.sh
 ```
 
-- Predict hands and (both 1st and 2nd orders) interacting objects. Required input: RGB image, hand mask, contact boundary mask
+- Predict hands and (both 1st and 2nd orders) interacting objects. 
 ```bash
 bash pred_obj2.sh
 ```
@@ -138,7 +138,7 @@ bash pred_obj2.sh
 
 ## Inference on Videos
 
-- Predict hands and (1st order) interacting objects. Required input: RGB video
+- Predict hands and (1st order) interacting objects. 
 ```bash
 bash ...
 ```
