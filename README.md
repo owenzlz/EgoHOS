@@ -92,6 +92,17 @@ bash download_testimages.sh
 
 Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. The backen segmentation model is Swin-L backbone with UPerNet head. 
 
+- Predict two hands, contact boundary, and interacting objects (1st order) sequentially. Required input: RGB image
+```bash
+bash ...
+```
+
+- Predict two hands, contact boundary, and interacting objects (1st and 2nd orders) sequentially. Required input: RGB image
+```bash
+bash ...
+```
+
+
 - Predict left and right hands. Required input: RGB image
 ```bash
 bash ...
