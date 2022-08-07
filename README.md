@@ -18,7 +18,7 @@ In this project, we signicantly improve the hand-object segmentation generalizat
 1. [Setup](#setup) - download pretrained models and resources
 2. [Datasets](#datasets) - download our egocentric hand-object segmentation datasets
 3. [Checkpoints](#checkpoints) - download the checkpoints for all our models
-4. [Inference on Images](#Inference) - quick inference on images<br>
+4. [Inference on Images](#inference_on_images) - quick inference on images<br>
 
 
 ## Setup
@@ -90,7 +90,7 @@ bash download_checkpoints.sh
 bash download_testimages.sh
 ```
 
-<a name="Inference"/>
+<a name="inference_on_images"/>
 ## Inference on Images
 
 Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. Please modify the image directory paths in the bash file if needed. The backen segmentation model is Swin-L backbone with UPerNet head. 
