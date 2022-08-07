@@ -17,7 +17,7 @@ import numpy as np
 from torchvision.transforms.functional import to_tensor
 from torchvision.utils import save_image
 
-additional_channel = ''
+additional_channel = 'aux'
 use_ccda = False
 
 @SEGMENTORS.register_module()
@@ -52,6 +52,8 @@ class EncoderDecoder(BaseSegmentor):
         self.train_cfg = train_cfg
         self.test_cfg = test_cfg
 
+        # pdb.set_trace()
+
         assert self.with_decode_head
 
     def _init_decode_head(self, decode_head):
@@ -81,16 +83,15 @@ class EncoderDecoder(BaseSegmentor):
         """Encode images with backbone and decode into a semantic segmentation
         map of the same size as input."""
 
-        if additional_channel == 'aux':
-                    
+        # pdb.set_trace()
+
+        if img_metas[0]['additional_channel'] == 'twohands':
+            
             img_h, img_w = img.shape[2], img.shape[3]; target_aspect_ratio = img_h / img_w
             aux_list = torch.zeros((img.shape[0], 1, img.shape[2], img.shape[3])).to(img.device)
             for i in range(img.shape[0]):
                 img_file = img_metas[i]['filename']
-                if use_ccda:
-                    path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands_ccda')
-                else:
-                    path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands')
+                path = img_metas[i]['twohands_dir']
                 fname = os.path.basename(img_file).split('.')[0] + '.png'
                 aux_file = os.path.join(path, fname)
 
@@ -108,19 +109,15 @@ class EncoderDecoder(BaseSegmentor):
             cat_input = torch.cat([img, aux_list], dim = 1)
             x = self.extract_feat(cat_input)
 
-        elif additional_channel == 'twohands_cb':
+        elif img_metas[0]['additional_channel'] == 'twohands_cb':
                     
             img_h, img_w = img.shape[2], img.shape[3]; target_aspect_ratio = img_h / img_w
             aux_list = torch.zeros((img.shape[0], 1, img.shape[2], img.shape[3])).to(img.device)
             cb_list = torch.zeros((img.shape[0], 1, img.shape[2], img.shape[3])).to(img.device)
             for i in range(img.shape[0]):
                 img_file = img_metas[i]['filename']
-                if use_ccda:
-                    aux_path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands_ccda')
-                    cb_path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_cb_ccda')
-                else:
-                    aux_path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands')
-                    cb_path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_cb')
+                aux_path = img_metas[i]['twohands_dir']
+                cb_path = img_metas[i]['cb_dir']
                 fname = os.path.basename(img_file).split('.')[0] + '.png'
                 aux_file = os.path.join(aux_path, fname)
                 cb_file = os.path.join(cb_path, fname)
@@ -161,8 +158,6 @@ class EncoderDecoder(BaseSegmentor):
     def _decode_head_forward_train(self, x, img_metas, gt_semantic_seg):
         """Run forward function and calculate loss for decode head in
         training."""
-
-        
 
         losses = dict()
         loss_decode = self.decode_head.forward_train(x, img_metas,
@@ -217,17 +212,14 @@ class EncoderDecoder(BaseSegmentor):
         Returns:
             dict[str, Tensor]: a dictionary of loss components
         """
-
-        if additional_channel == 'aux':
-                    
+        
+        if img_metas[0]['additional_channel'] == 'twohands':
+            
             img_h, img_w = img.shape[2], img.shape[3]; target_aspect_ratio = img_h / img_w
             aux_list = torch.zeros((img.shape[0], 1, img.shape[2], img.shape[3])).to(img.device)
             for i in range(img.shape[0]):
                 img_file = img_metas[i]['filename']
-                if use_ccda:
-                    path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands_ccda')
-                else:
-                    path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands')
+                path = img_metas[i]['twohands_dir']
                 fname = os.path.basename(img_file).split('.')[0] + '.png'
                 aux_file = os.path.join(path, fname)
 
@@ -245,19 +237,15 @@ class EncoderDecoder(BaseSegmentor):
             cat_input = torch.cat([img, aux_list], dim = 1)
             x = self.extract_feat(cat_input)
 
-        elif additional_channel == 'twohands_cb':
+        elif img_metas[0]['additional_channel'] == 'twohands_cb':
                     
             img_h, img_w = img.shape[2], img.shape[3]; target_aspect_ratio = img_h / img_w
             aux_list = torch.zeros((img.shape[0], 1, img.shape[2], img.shape[3])).to(img.device)
             cb_list = torch.zeros((img.shape[0], 1, img.shape[2], img.shape[3])).to(img.device)
             for i in range(img.shape[0]):
                 img_file = img_metas[i]['filename']
-                if use_ccda:
-                    aux_path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands_ccda')
-                    cb_path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_cb_ccda')
-                else:
-                    aux_path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_twohands')
-                    cb_path = os.path.join(os.path.dirname(os.path.dirname(img_file)), 'pred_cb')
+                aux_path = img_metas[i]['twohands_dir']
+                cb_path = img_metas[i]['cb_dir']
                 fname = os.path.basename(img_file).split('.')[0] + '.png'
                 aux_file = os.path.join(aux_path, fname)
                 cb_file = os.path.join(cb_path, fname)
@@ -278,10 +266,8 @@ class EncoderDecoder(BaseSegmentor):
                 cb = torch.from_numpy(np.array(cb.resize((img_w, img_h)))).unsqueeze(0).to(img[i].device).float()
                 cb_list[i] = cb
             
-            # print('pdb @ encoder_decoder.py 281'); import pdb; pdb.set_trace()
-            # save_image(img, '/mnt/session_space/home/lingzzha/EgoHOS/mmsegmentation/img.jpg', nrow = 4)
-            # save_image(aux_list, '/mnt/session_space/home/lingzzha/EgoHOS/mmsegmentation/aux_list.jpg', nrow = 4)
-            # save_image(cb_list, '/mnt/session_space/home/lingzzha/EgoHOS/mmsegmentation/cb_list.jpg', nrow = 4)
+            # print('pdb @ encoder_decoder.py 144'); import pdb; pdb.set_trace()
+            
             cat_input = torch.cat([img, aux_list, cb_list], dim = 1)
             x = self.extract_feat(cat_input)
 

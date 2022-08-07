@@ -4,7 +4,6 @@ import mmcv
 import torch
 from mmcv.parallel import collate, scatter
 from mmcv.runner import load_checkpoint
-
 from mmseg.datasets.pipelines import Compose
 from mmseg.models import build_segmentor
 
@@ -29,6 +28,7 @@ def init_segmentor(config, checkpoint=None, device='cuda:0'):
                         'but got {}'.format(type(config)))
     config.model.pretrained = None
     config.model.train_cfg = None
+    # import pdb; pdb.set_trace()
     model = build_segmentor(config.model, test_cfg=config.get('test_cfg'))
     if checkpoint is not None:
         checkpoint = load_checkpoint(model, checkpoint, map_location='cpu')
@@ -93,6 +93,13 @@ def inference_segmentor(model, img):
     else:
         data['img_metas'] = [i.data[0] for i in data['img_metas']]
 
+    if 'additional_channel' in cfg.keys():
+        data['img_metas'][0][0]['additional_channel'] = cfg['additional_channel']
+    if 'twohands_dir' in cfg.keys():
+        data['img_metas'][0][0]['twohands_dir'] = cfg['twohands_dir']
+    if 'cb_dir' in cfg.keys():
+        data['img_metas'][0][0]['cb_dir'] = cfg['cb_dir']
+    
     # forward the model
     with torch.no_grad():
         result = model(return_loss=False, rescale=True, **data)
