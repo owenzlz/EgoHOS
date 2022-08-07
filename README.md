@@ -97,7 +97,6 @@ bash download_checkpoints.sh
 Let's first download a few test images for running the demo. 
 
 - Download test images:
-	- we provide a script for downloading a few test images. 
 ```bash
 bash download_testimages.sh
 ```
@@ -143,7 +142,6 @@ bash pred_obj2.sh
 Let's first download a test video for running the demo. 
 
 - Download test images:
-	- we provide a script for downloading a few test images. 
 ```bash
 bash download_testvideos.sh
 ```
