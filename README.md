@@ -171,9 +171,9 @@ bash pred_obj2_video.sh
 ## Other Resouces
 
 We used other resources for the applications, i.e. mesh reconstruction, video inpainting, in our paper.
-1. Image Inpainting - LaMa: 
+1. Image Inpainting - LaMa: [https://github.com/saic-mdal/lama](https://github.com/saic-mdal/lama)
 2. Video Inpainting - Flow-edge Guided Video Completion: [https://github.com/vt-vl-lab/FGVC](https://github.com/vt-vl-lab/FGVC)
-3. Mesh Reconstruction of Hand-Object: 
-4. Video Recognition - SlowFast Newtork: 
+3. Mesh Reconstruction of Hand-Object: [https://github.com/hassony2/homan](https://github.com/hassony2/homan)
+4. Video Recognition - SlowFast Newtork: [https://github.com/epic-kitchens/epic-kitchens-slowfast](https://github.com/epic-kitchens/epic-kitchens-slowfast)
 
 
