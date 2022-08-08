@@ -20,7 +20,7 @@ Our main goal is to provide a tool for better hand-object segmentation on the in
 3. [Checkpoints](#checkpoints) - download the checkpoints for all our models
 4. [Inference on Images](#inference_on_images) - quick usage on images
 5. [Inference on Videos](#inference_on_videos) - quick usage on videos<br>
-
+6. [Other Resources](#other_github) - other resources used in our papers<br>
 
 
 ## Setup
@@ -166,7 +166,15 @@ cd mmsegmentation # if you are not in this directory
 bash pred_obj2_video.sh
 ```
 
+<a name="other_github"/>
 
+## Other Resouces
 
+We used other resources for the applications, i.e. mesh reconstruction, video inpainting, in our paper. The lists are below: 
+
+1. Image Inpainting - LaMa: 
+2. Video Inpainting - Flow-edge Guided Video Completion: [https://github.com/vt-vl-lab/FGVC](https://github.com/vt-vl-lab/FGVC)
+3. Mesh Reconstruction of Hand-Object: 
+4. Video Recognition - SlowFast Newtork: 
 
 
