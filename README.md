@@ -170,7 +170,7 @@ bash pred_obj2_video.sh
 
 ## Other Resouces
 
-We used other resources for the applications, i.e. mesh reconstruction, video inpainting, in our paper.
+We used other resources for the application section, i.e. mesh reconstruction, video inpainting. Please refer to below:
 1. Image Inpainting - LaMa: [https://github.com/saic-mdal/lama](https://github.com/saic-mdal/lama)
 2. Video Inpainting - Flow-edge Guided Video Completion: [https://github.com/vt-vl-lab/FGVC](https://github.com/vt-vl-lab/FGVC)
 3. Mesh Reconstruction of Hand-Object: [https://github.com/hassony2/homan](https://github.com/hassony2/homan)
