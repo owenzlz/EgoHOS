@@ -177,3 +177,8 @@ We used other resources for the application section, i.e. mesh reconstruction. P
 4. Video Recognition - SlowFast Newtork: [https://github.com/epic-kitchens/epic-kitchens-slowfast](https://github.com/epic-kitchens/epic-kitchens-slowfast)
 
 
+### Citation
+If you use this code for your research, please cite our paper:
+```
+
+```
