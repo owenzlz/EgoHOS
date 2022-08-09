@@ -131,3 +131,4 @@ writer.close()
 # remove all folders
 if args.remove_intermediate_images:
     os.system('rm -rf ' + video_dir)
+
