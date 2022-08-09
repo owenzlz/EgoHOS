@@ -178,7 +178,7 @@ We used other resources for the application section, i.e. mesh reconstruction. P
 3. Mesh Reconstruction of Hand-Object: [https://github.com/hassony2/homan](https://github.com/hassony2/homan)
 4. Video Recognition - SlowFast Newtork: [https://github.com/epic-kitchens/epic-kitchens-slowfast](https://github.com/epic-kitchens/epic-kitchens-slowfast)
 
-The masking quality of interacting objects are sometimes noisy, if you wish to obtain very quality mask you may consider using mask refinement model, i.e. Cascade PSP, to further refine. Cascade PSP: [https://github.com/hkchengrex/CascadePSP](https://github.com/hkchengrex/CascadePSP)
+The masking quality of interacting objects are sometimes noisy, if you wish to obtain very quality mask you may consider using mask refinement model, i.e. Cascade PSP: [https://github.com/hkchengrex/CascadePSP](https://github.com/hkchengrex/CascadePSP)
 
 
 ### Citation
