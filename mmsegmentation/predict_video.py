@@ -35,6 +35,7 @@ video_cb_dir = os.path.join(video_dir, 'pred_cb'); os.makedirs(video_cb_dir, exi
 video_obj1_dir = os.path.join(video_dir, 'pred_obj1'); os.makedirs(video_obj1_dir, exist_ok = True)
 video_obj2_dir = os.path.join(video_dir, 'pred_obj2'); os.makedirs(video_obj2_dir, exist_ok = True)
 
+
 # # extract video frames and save them into a directory
 print('Reading and extracting video frames......')
 reader = imageio.get_reader(args.input_video_file, 'ffmpeg')
@@ -93,7 +94,7 @@ else:
 # stitch prediction into a video
 print('stitch prediction into a video......')
 writer = imageio.get_writer(args.output_video_file, fps = fps)
-for img_file in tqdm(glob.glob(video_image_dir + '/*')):
+for img_file in tqdm(sorted(glob.glob(video_image_dir + '/*'))):
     fname = os.path.basename(img_file).split('.')[0]
     twohands_file = os.path.join(video_twohands_dir, fname + '.png')
 

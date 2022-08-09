@@ -116,6 +116,8 @@ cd mmsegmentation # if you are not in this directory
 bash pred_all_obj2.sh
 ```
 
+<img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/twohands_obj2_optimized.gif" style="width:850px;">
+
 If you only want to predict only hand/contact segmentation, or want to use each module separately, see the commands below. 
 
 - Predict only the left and right hands.
