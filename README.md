@@ -100,7 +100,7 @@ bash download_testimages.sh
 
 Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. Please modify the image directory paths in the bash file if needed. The backen segmentation model is Swin-L backbone with UPerNet head. 
 
-The default of the bash commands run on the ./testimages/images, and the results are saved in ./testimages folder. If you wish to test on your own images, you may either put your images into "./testimages/images" folder or change directories in the bash files.
+The default of the bash commands run on the images in "./testimages/images", and the results are saved in "./testimages" folder. If you wish to test on your own images, you may either put your images into "./testimages/images" folder or change directories in the bash files.
 
 - Predict two hands, contact boundary, and interacting objects (1st order) sequentially. 
 ```bash
@@ -174,11 +174,10 @@ bash pred_obj2_video.sh
 We used other resources for the application section, i.e. mesh reconstruction. Please refer to below:
 1. Image Inpainting - LaMa: [https://github.com/saic-mdal/lama](https://github.com/saic-mdal/lama)
 2. Video Inpainting - Flow-edge Guided Video Completion: [https://github.com/vt-vl-lab/FGVC](https://github.com/vt-vl-lab/FGVC)
-3. Mesh Reconstruction of Hand-Object: [https://github.com/hassony2/homan](https://github.com/hassony2/homan)
+3. Mesh Reconstruction of Hand-Object Interaction: [https://github.com/hassony2/homan](https://github.com/hassony2/homan)
 4. Video Recognition - SlowFast Newtork: [https://github.com/epic-kitchens/epic-kitchens-slowfast](https://github.com/epic-kitchens/epic-kitchens-slowfast)
 
 If you wish to generate higher quality mask, you may consider using mask refinement model, i.e. Cascade PSP: [https://github.com/hkchengrex/CascadePSP](https://github.com/hkchengrex/CascadePSP)
-
 
 ### Citation
 If you use this code for your research, please cite our paper:
