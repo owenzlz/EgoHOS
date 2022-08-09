@@ -3,7 +3,7 @@
 
 <img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/teaser.gif" style="width:800px;">
 
-**Fine-Grained Egocentric Hand-Object Segmentation: Dataset, Model, and Applications(https://arxiv.org/pdf/2208.03826.pdf)**\
+**Fine-Grained Egocentric Hand-Object Segmentation: Dataset, Model, and Applications**\
 *European Conference on Computer Vision (ECCV), 2022*\
 [Lingzhi Zhang*](https://owenzlz.github.io/), [Shenghao Zhou*](https://scholar.google.com/citations?user=kWdwbUYAAAAJ&hl=en), [Simon Stent](https://scholar.google.com/citations?user=f3aij5UAAAAJ&hl=en), [Jianbo Shi](https://www.cis.upenn.edu/~jshi/) (* indicates equal contribution)
 
