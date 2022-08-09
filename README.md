@@ -9,8 +9,6 @@
 
 Our main goal is to provide a tool for better hand-object segmentation on the in-the-wild egocentric videos. 
 
-
-
 ## Prerequisites
 - Linux
 - Python 3
@@ -23,7 +21,6 @@ Our main goal is to provide a tool for better hand-object segmentation on the in
 4. [Inference on Images](#inference_on_images) - quick usage on images
 5. [Inference on Videos](#inference_on_videos) - quick usage on videos<br>
 6. [Other Resources](#other_github) - other resources used in our papers<br>
-
 
 ## Setup
 - Clone this repo:
@@ -103,6 +100,8 @@ bash download_testimages.sh
 
 Depending on the application scenarios, you may want to use one of these commands to generate the segmentation predictions. Please modify the image directory paths in the bash file if needed. The backen segmentation model is Swin-L backbone with UPerNet head. 
 
+The default of the bash commands run on the ./testimages/images, and the results are saved in ./testimages folder. If you wish to test on your own images, you may either put your images into "./testimages/images" folder or change directories in the bash files.
+
 - Predict two hands, contact boundary, and interacting objects (1st order) sequentially. 
 ```bash
 cd mmsegmentation # if you are not in this directory
@@ -178,7 +177,7 @@ We used other resources for the application section, i.e. mesh reconstruction. P
 3. Mesh Reconstruction of Hand-Object: [https://github.com/hassony2/homan](https://github.com/hassony2/homan)
 4. Video Recognition - SlowFast Newtork: [https://github.com/epic-kitchens/epic-kitchens-slowfast](https://github.com/epic-kitchens/epic-kitchens-slowfast)
 
-The masking quality of interacting objects are sometimes noisy, if you wish to obtain very quality mask you may consider using mask refinement model, i.e. Cascade PSP: [https://github.com/hkchengrex/CascadePSP](https://github.com/hkchengrex/CascadePSP)
+If you wish to generate higher quality mask, you may consider using mask refinement model, i.e. Cascade PSP: [https://github.com/hkchengrex/CascadePSP](https://github.com/hkchengrex/CascadePSP)
 
 
 ### Citation
