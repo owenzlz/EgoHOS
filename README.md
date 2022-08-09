@@ -1,13 +1,15 @@
 # EgoHOS
-[Project Page](https://www.seas.upenn.edu/~shzhou2/projects/eos_dataset/) |  [Paper] | [Bibtex]
+[Project Page](https://www.seas.upenn.edu/~shzhou2/projects/eos_dataset/) |  [Paper](https://arxiv.org/pdf/2208.03826.pdf) | [Bibtex]
 
 <img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/teaser.gif" style="width:800px;">
 
-**Fine-Grained Egocentric Hand-Object Segmentation: Dataset, Model, and Applications**\
+**Fine-Grained Egocentric Hand-Object Segmentation: Dataset, Model, and Applications(https://arxiv.org/pdf/2208.03826.pdf)**\
 *European Conference on Computer Vision (ECCV), 2022*\
 [Lingzhi Zhang*](https://owenzlz.github.io/), [Shenghao Zhou*](https://scholar.google.com/citations?user=kWdwbUYAAAAJ&hl=en), [Simon Stent](https://scholar.google.com/citations?user=f3aij5UAAAAJ&hl=en), [Jianbo Shi](https://www.cis.upenn.edu/~jshi/) (* indicates equal contribution)
 
 Our main goal is to provide a tool for better hand-object segmentation on the in-the-wild egocentric videos. 
+
+
 
 ## Prerequisites
 - Linux
