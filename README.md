@@ -184,17 +184,14 @@ If you wish to generate higher quality mask, you may consider using mask refinem
 ### Citation
 If you use this code for your research, please cite our paper:
 ```
-@misc{https://doi.org/10.48550/arxiv.2208.03826,
+@article{zhang2022EOS,
+  title={Fine-Grained Egocentric Hand-Object Segmentation: Dataset, Model, and Applications},
   doi = {10.48550/ARXIV.2208.03826},
   url = {https://arxiv.org/abs/2208.03826},
-  author = {Zhang, Lingzhi and Zhou, Shenghao and Stent, Simon and Shi, Jianbo},
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {Fine-Grained Egocentric Hand-Object Segmentation: Dataset, Model, and Applications},
-  publisher = {arXiv},
-  year = {2022},
-  copyright = {arXiv.org perpetual, non-exclusive license}
+  author={Zhang, Lingzhi and Zhou, Shenghao and Stent, Simon and Shi, Jianbo},
+  booktitle={arXiv preprint arXiv:2208.03826},
+  year={2022}
 }
-
 ```
 
 

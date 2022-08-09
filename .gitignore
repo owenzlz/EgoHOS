@@ -13,6 +13,4 @@
 /testimages
 /testvideos
 
-/preprocess_script/merge_data.py
-
 /mmsegmentation/work_dirs_exp
