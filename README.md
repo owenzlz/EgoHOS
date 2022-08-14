@@ -1,5 +1,5 @@
 # EgoHOS
-[Project Page](https://www.seas.upenn.edu/~shzhou2/projects/eos_dataset/) |  [Paper](https://arxiv.org/pdf/2208.03826.pdf) | [Bibtex]
+[Project Page](https://www.seas.upenn.edu/~shzhou2/projects/eos_dataset/) |  [Paper](https://arxiv.org/pdf/2208.03826.pdf) | [Bibtex](https://scholar.googleusercontent.com/scholar.bib?q=info:fjdxr9gmTfgJ:scholar.google.com/&output=citation&scisdr=CgVB6GfVENSznnaBOqE:AAGBfm0AAAAAYvmHIqG6dxrrnCPKbcHuv2lyNg5mgWfH&scisig=AAGBfm0AAAAAYvmHIgRZZnzwOLARESMy3LGZV2cCOHLQ&scisf=4&ct=citation&cd=-1&hl=en)
 
 <img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/teaser.gif" style="width:800px;">
 
