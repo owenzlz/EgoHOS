@@ -30,8 +30,9 @@ git clone https://github.com/owenzlz/EgoHOS
 
 - Install dependencies:
 ```bash
+pip install -r requirements.txt
 pip install -U openmim
-mim install mmcv-full
+mim install mmcv-full==1.6.0
 cd mmsegmentation
 pip install -v -e .
 ```
