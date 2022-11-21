@@ -185,13 +185,13 @@ If you wish to generate higher quality mask, you may consider using mask refinem
 ### Citation
 If you use this code for your research, please cite our paper:
 ```
-@article{zhang2022EOS,
+@inproceedings{zhang2022fine,
   title={Fine-Grained Egocentric Hand-Object Segmentation: Dataset, Model, and Applications},
-  doi = {10.48550/ARXIV.2208.03826},
-  url = {https://arxiv.org/abs/2208.03826},
   author={Zhang, Lingzhi and Zhou, Shenghao and Stent, Simon and Shi, Jianbo},
-  booktitle={arXiv preprint arXiv:2208.03826},
-  year={2022}
+  booktitle={European Conference on Computer Vision},
+  pages={127--145},
+  year={2022},
+  organization={Springer}
 }
 ```
 
