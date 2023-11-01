@@ -78,11 +78,11 @@ class EncoderDecoder(BaseSegmentor):
         if self.with_neck:
             x = self.neck(x)
         return x
-
+    
     def encode_decode(self, img, img_metas):
         """Encode images with backbone and decode into a semantic segmentation
         map of the same size as input."""
-                
+        
         if img_metas[0]['additional_channel'] == 'twohands':
             
             img_h, img_w = img.shape[2], img.shape[3]; target_aspect_ratio = img_h / img_w
