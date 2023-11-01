@@ -10,5 +10,5 @@ python visualize.py \
        --mode twohands_obj2 \
        --img_dir ../testimages/images \
        --twohands_dir ../testimages/pred_twohands \
-       --obj1_dir ../testimages/pred_obj2 \
+       --obj2_dir ../testimages/pred_obj2 \
        --vis_dir ../testimages/pred_obj2_vis

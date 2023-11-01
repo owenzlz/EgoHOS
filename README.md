@@ -1,5 +1,5 @@
 # EgoHOS
-[Project Page](https://www.seas.upenn.edu/~shzhou2/projects/eos_dataset/) |  [Paper](https://arxiv.org/pdf/2208.03826.pdf) | [Bibtex]
+[Project Page](https://www.seas.upenn.edu/~shzhou2/projects/eos_dataset/) |  [Paper](https://arxiv.org/pdf/2208.03826.pdf) | [Bibtex](https://scholar.googleusercontent.com/scholar.bib?q=info:fjdxr9gmTfgJ:scholar.google.com/&output=citation&scisdr=CgVB6GfVENSznnaBOqE:AAGBfm0AAAAAYvmHIqG6dxrrnCPKbcHuv2lyNg5mgWfH&scisig=AAGBfm0AAAAAYvmHIgRZZnzwOLARESMy3LGZV2cCOHLQ&scisf=4&ct=citation&cd=-1&hl=en)
 
 <img src="https://github.com/owenzlz/EgoHOS/blob/main/demo/teaser.gif" style="width:800px;">
 
@@ -30,8 +30,9 @@ git clone https://github.com/owenzlz/EgoHOS
 
 - Install dependencies:
 ```bash
+pip install -r requirements.txt
 pip install -U openmim
-mim install mmcv-full
+mim install mmcv-full==1.6.0
 cd mmsegmentation
 pip install -v -e .
 ```
@@ -184,13 +185,13 @@ If you wish to generate higher quality mask, you may consider using mask refinem
 ### Citation
 If you use this code for your research, please cite our paper:
 ```
-@article{zhang2022EOS,
+@inproceedings{zhang2022fine,
   title={Fine-Grained Egocentric Hand-Object Segmentation: Dataset, Model, and Applications},
-  doi = {10.48550/ARXIV.2208.03826},
-  url = {https://arxiv.org/abs/2208.03826},
   author={Zhang, Lingzhi and Zhou, Shenghao and Stent, Simon and Shi, Jianbo},
-  booktitle={arXiv preprint arXiv:2208.03826},
-  year={2022}
+  booktitle={European Conference on Computer Vision},
+  pages={127--145},
+  year={2022},
+  organization={Springer}
 }
 ```
 

@@ -1,0 +1,4 @@
+torch==1.11.0
+torchvision
+scikit-image
+imageio-ffmpeg
