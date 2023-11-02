@@ -1,4 +1,4 @@
 pip install gdown
-gdown https://drive.google.com/uc?id=1c8UmB9AOr4Q0vCfSZV8ghhWf71uo7BDw
+gdown https://drive.google.com/file/d/1G27in6x25VHdLVbftWv8ddt4kv_lyOmM/view?usp=sharing
 unzip testimages.zip
 rm testimages.zip
